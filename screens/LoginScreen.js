@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, KeyboardAvoidingView, View} from 'react-native';
+import { StyleSheet, KeyboardAvoidingView, View, Platform} from 'react-native';
 import Colors from './../constants/Colors';
 import MiniButton from './../components/basic/MiniButton';
 import CustomTextInput from './../components/basic/CustomTextInput';
@@ -8,26 +8,26 @@ import CustomButton from './../components/basic/CustomButton';
 import CustomButtonGroup from './../components/basic/ButtonGroup';
 import ItemButtonGroup from './../components/basic/ItemButtonGroup';
 import CustomSwitch from './../components/basic/CustomSwitch';
-import OptionGroup from '../components/login/OptionGroup';
+import ServiceGroup from '../components/login/ServiceGroup';
 
 const LoginScreen = props => {
     
     return (
         <KeyboardAvoidingView       
-            behavior="padding"
+            behavior={Platform.OS === "ios" ? "padding" : null}
             keyboardVerticalOffset={0}
             style={styles.container}>
             <View style={styles.switch}> 
             <CustomSwitch content="VI"></CustomSwitch>
             </View>
             <View style={styles.image}>
-            <CustomImage source={require('./../assets/images/way4.png')}></CustomImage> 
+                <CustomImage source={require('./../assets/images/way4.png')}></CustomImage> 
             </View>
             <View style={styles.form}>     
-            <CustomTextInput placeholder="Phone Number" icon="user"></CustomTextInput>
+            <CustomTextInput placeholder="Phone Number" icon="user-alt"></CustomTextInput>
             <CustomTextInput placeholder="Password" icon="key"></CustomTextInput>
             <CustomButton icon="sign-in" iconSize={30} 
-                backgroundColor={Colors.CadetBlue} color={Colors.White}> Sign in</CustomButton>
+                backgroundColor={Colors.CornflowerBlue} color={Colors.White}> Sign in</CustomButton>
             <CustomButtonGroup>
                 <ItemButtonGroup>
                 <MiniButton icon="create-outline" 
@@ -44,7 +44,7 @@ const LoginScreen = props => {
             </CustomButtonGroup>
             </View>
             <View style={styles.option}>
-                <OptionGroup navigation={props.navigation}></OptionGroup>
+                <ServiceGroup navigation={props.navigation}></ServiceGroup>
             </View>
         </KeyboardAvoidingView>
     );

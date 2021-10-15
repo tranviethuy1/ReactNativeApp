@@ -37,5 +37,6 @@ export default {
   HotPink: '#FF69B4',
   Maroon: '#800000',
   White: '#ffffff',
-  LightGrey: '#D3D3D3'
+  LightGrey: '#D3D3D3',
+  DeepSkyBlue: '#00BFFF'
 }

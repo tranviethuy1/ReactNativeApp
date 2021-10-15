@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontFamily: 'open-sans',
     fontSize: 16,
     color: Colors.CornflowerBlue,
-    textDecorationLine: "underline"
+    textDecorationLine: "underline",
   }
 });
 

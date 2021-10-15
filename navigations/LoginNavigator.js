@@ -11,6 +11,7 @@ import ContactScreen from '../screens/ContactScreen';
 import ServiceScreen from '../screens/ServiceScreen';
 import StockScreen from '../screens/StockScreen';
 import GiftScreen from '../screens/GiftScreen';
+import MapScreen from '../screens/MapScreen';
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -59,6 +60,9 @@ const LoginNavigator = createStackNavigator(
     },
     Stock: {
       screen: StockScreen
+    },
+    Map: {
+      screen: MapScreen
     }
   },
   {

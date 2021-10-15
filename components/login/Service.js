@@ -4,7 +4,7 @@ import MiniButton from '../basic/MiniButton';
 import Colors from '../../constants/Colors';
 import DefaultText from '../basic/DefaultText';
 
-const Option = props => {
+const Service = props => {
   return (
     <View style={styles.container}>
         <MiniButton icon={props.icon}                    
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default Option;
+export default Service;

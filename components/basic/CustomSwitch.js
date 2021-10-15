@@ -10,8 +10,8 @@ const CustomSwitch = props => {
         <View style={styles.container}>
             <DefaultText style={styles.switch}>{props.content}</DefaultText>
             <Switch {...props}
-                trackColor={{ false: Colors.DarkGray, true: Colors.DeepPink }}
-                thumbColor={onStatus ? Colors.HotPink : Colors.LightGrey}
+                trackColor={{ false: Colors.DarkGray, true: Colors.CornflowerBlue }}
+                thumbColor={onStatus ? Colors.LightSkyBlue : Colors.LightGrey}
                 ios_backgroundColor="#3e3e3e"
                 onValueChange={(val) => changeStatus(val)}
                 value={onStatus}

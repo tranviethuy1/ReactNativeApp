@@ -30,13 +30,15 @@ const styles = StyleSheet.create({
         fontFamily: 'open-sans',
         borderRadius: 4,
         borderColor: Colors.White,
-        borderBottomColor: Colors.Black
+        borderBottomColor: Colors.Black,
+        color: Colors.CornflowerBlue
     },
     iconStyle: {
-      marginTop: 10,
+      marginTop: 15,
       paddingTop: 10,
       paddingLeft:10,
       paddingRight: 0,
+      color: Colors.CornflowerBlue
     }
   });
 
